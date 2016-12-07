@@ -4,8 +4,7 @@
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
     "start": "live-server --entry-file=404.html",
-    "build": "webpack",
-    "deploy": "gh-pages -d ."
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -31,7 +30,6 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
-    "gh-pages": "^0.12.0",
     "live-server": "^1.0.0",
     "webpack": "^1.13.1"
   }

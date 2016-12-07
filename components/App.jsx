@@ -11,10 +11,13 @@ function App({ children, routes }) {
     let path = '';
 
     function nextPath(route) {
+      console.log(`route = ${route.path}`);
+      console.log(`path in = ${path}`);
       path += (
         (path.slice(-1) === '/' ? '' : '/') +
         (route.path === '/' ? '' : route.path)
       );
+      console.log(`path out = ${path}`);
       return path;
     }
 
