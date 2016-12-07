@@ -5,7 +5,7 @@ function Home() {
   const reactLink = 'https://github.com/facebook/react';
   const reactRouterLink = 'https://github.com/reactjs/react-router';
   const ghPagesLink = 'https://pages.github.com/';
-  const repoReadmeLink = 'https://github.com/rafrex/spa-github-pages#readme';
+  const repoReadmeLink = 'https://github.com/zksailor534/spa-github-pages#readme';
 
   return (
     <div>
@@ -24,8 +24,8 @@ function Home() {
         instructions on how to use this boilerplate
         to deploy your own single page app using GitHub Pages.
       </p>
-      <div><Link to="/example">Example page</Link></div>
-      <div><Link to="/example/two-deep?field1=foo&field2=bar#boom!">
+      <div><Link to="/spa-github-pages/example">Example page</Link></div>
+      <div><Link to="/spa-github-pages/example/two-deep?field1=foo&field2=bar#boom!">
         Example two deep with query and hash
       </Link></div>
     </div>

@@ -3,14 +3,15 @@
   "version": "2.0.0",
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
-    "start": "npm run build && live-server --entry-file=404.html",
-    "build": "webpack"
+    "start": "live-server --entry-file=404.html",
+    "build": "webpack",
+    "deploy": "gh-pages -t -d ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": "git+https://github.com/zksailor534/spa-github-pages.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Nathanael Greene <nate.greene@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "current-input": "^1.1.0",
@@ -30,6 +31,7 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
+    "gh-pages": "^0.12.0",
     "live-server": "^1.0.0",
     "webpack": "^1.13.1"
   }

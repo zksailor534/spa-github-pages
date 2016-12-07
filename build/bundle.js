@@ -80,7 +80,7 @@
 
 	var routes = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { path: '/', mapMenuTitle: 'Home', component: _App2.default },
+	  { path: '/spa-github-pages', mapMenuTitle: 'Home', component: _App2.default },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	  _react2.default.createElement(
 	    _reactRouter.Route,
@@ -27912,7 +27912,7 @@
 	    });
 	  }
 
-	  var repoLink = 'https://github.com/rafrex/spa-github-pages';
+	  var repoLink = 'https://github.com/zksailor534/spa-github-pages';
 
 	  return _react2.default.createElement(
 	    'div',
@@ -27925,7 +27925,7 @@
 	    _react2.default.createElement(
 	      'a',
 	      { href: repoLink },
-	      'https://github.com/rafrex/spa-github-pages'
+	      'https://github.com/zksailor534/spa-github-pages'
 	    ),
 	    _react2.default.createElement(
 	      'nav',
@@ -27976,7 +27976,7 @@
 	  var reactLink = 'https://github.com/facebook/react';
 	  var reactRouterLink = 'https://github.com/reactjs/react-router';
 	  var ghPagesLink = 'https://pages.github.com/';
-	  var repoReadmeLink = 'https://github.com/rafrex/spa-github-pages#readme';
+	  var repoReadmeLink = 'https://github.com/zksailor534/spa-github-pages#readme';
 
 	  return _react2.default.createElement(
 	    'div',
@@ -28029,7 +28029,7 @@
 	      null,
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { to: '/example' },
+	        { to: '/spa-github-pages/example' },
 	        'Example page'
 	      )
 	    ),
@@ -28038,7 +28038,7 @@
 	      null,
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { to: '/example/two-deep?field1=foo&field2=bar#boom!' },
+	        { to: '/spa-github-pages/example/two-deep?field1=foo&field2=bar#boom!' },
 	        'Example two deep with query and hash'
 	      )
 	    )
@@ -28125,7 +28125,7 @@
 	      null,
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { to: '/example/two-deep?field1=foo&field2=bar#boom!' },
+	        { to: '/spa-github-pages/example/two-deep?field1=foo&field2=bar#boom!' },
 	        'Example two deep with query and hash'
 	      )
 	    )
@@ -28190,7 +28190,7 @@
 	      null,
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { to: '/example/two-deep' + queryString + hashFragment },
+	        { to: '/spa-github-pages/example/two-deep' + queryString + hashFragment },
 	        linkText
 	      )
 	    );
