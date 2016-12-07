@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "description": "Single Page Apps for GitHub Pages",
   "scripts": {
-    "start": "webpack -d --watch & live-server --entry-file=404.html"
+    "start": "npm run build && live-server --entry-file=404.html",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
