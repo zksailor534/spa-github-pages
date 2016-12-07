@@ -31,7 +31,7 @@ function ExampleTwoDeepComponent({ location }) {
     if (!queryPresent && !hashPresent) linkText = 'Show with query string and hash fragment';
 
     return (
-      <div><Link to={`/example/two-deep${queryString}${hashFragment}`}>
+      <div><Link to={`/spa-github-pages/example/two-deep${queryString}${hashFragment}`}>
         {linkText}
       </Link></div>
     );
