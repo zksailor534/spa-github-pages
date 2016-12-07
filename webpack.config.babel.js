@@ -1,5 +1,8 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+const extractCSS = new ExtractTextPlugin('bundle.css');
 
 export default {
   context: __dirname,
@@ -10,11 +13,35 @@ export default {
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
+      {
+        test: /\.png$/,
+        loader: 'url?limit=100000&mimetype=image/png',
+      },
+      {
+        test: /\.jpg$/,
+        loader: 'file',
+      },
+      {
+        test: /\.(ttf|eot|svg|gif)(\?[\s\S]+)?$/,
+        loader: 'file',
+      },
+      {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&mimetype=application/font-woff',
+      },
+      {
+        test: /\.css$/,
+        loader: extractCSS.extract('style', 'css?sourceMap'),
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+      },
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', '.css', '.png', '.jpg'],
   },
   plugins: (() => {
     if (process.argv.indexOf('-p') !== -1) {
@@ -29,8 +56,11 @@ export default {
             comments: false,
           },
         }),
+        extractCSS,
       ];
     }
-    return [];
+    return [
+      extractCSS,
+    ];
   })(),
 };

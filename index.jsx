@@ -3,6 +3,11 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import 'current-input';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.css';
+import 'admin-lte/dist/css/AdminLTE.min.css';
+import 'admin-lte/dist/css/skins/_all-skins.min.css';
+
 import App from './components/App';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
