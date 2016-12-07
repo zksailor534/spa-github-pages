@@ -3,12 +3,13 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import 'current-input';
 
-import App from './components/App';
-import Home from './components/Home';
-import PageNotFound from './components/PageNotFound';
-import ExampleComponent from './components/ExampleComponent';
-import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
+import App from '../components/App';
+import Home from '../components/Home';
+import PageNotFound from '../components/PageNotFound';
+import ExampleComponent from '../components/ExampleComponent';
+import ExampleTwoDeepComponent from '../components/ExampleTwoDeepComponent';
 
+import '../styles/app.css';
 
 const routes = (
   <Route path="spa-github-pages" mapMenuTitle="Home" component={App}>

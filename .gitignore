@@ -1,6 +1,9 @@
 # Dependency directory
 node_modules
 
+# Github Pages
+gh-pages
+
 # Source maps
 *.js.map
 

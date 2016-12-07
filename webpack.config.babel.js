@@ -1,15 +1,22 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+
+const extractCSS = new ExtractTextPlugin('bundle.css');
 
 export default {
   context: __dirname,
-  entry: './index.jsx',
+  entry: './demo/index.jsx',
   output: {
-    path: `${__dirname}/build`,
+    path: `${__dirname}/gh-pages`,
     filename: 'bundle.js',
   },
   module: {
     loaders: [
+      {
+        test: /\.css$/,
+        loader: extractCSS.extract('style', 'css?sourceMap'),
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -18,7 +25,7 @@ export default {
     ],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx', '.css'],
   },
   plugins: (() => {
     if (process.argv.indexOf('-p') !== -1) {
@@ -33,8 +40,11 @@ export default {
             comments: false,
           },
         }),
+        extractCSS,
       ];
     }
-    return [];
+    return [
+      extractCSS,
+    ];
   })(),
 };
