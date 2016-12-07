@@ -18,6 +18,7 @@
     "current-input": "^1.1.0",
     "font-awesome": "^4.7.0",
     "react": "^15.1.0",
+    "react-adminlte-dash": "0.0.7",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1"
   },
